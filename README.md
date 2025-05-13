@@ -72,7 +72,8 @@ endmodule
 
 **TIMING DIGRAMS FOR SISO Shift Register**
 
-![waveform siso](https://github.com/user-attachments/assets/54c45b67-7424-4232-a809-21b9d99d3bc4)
+![image](https://github.com/user-attachments/assets/ae323052-dd7c-42bb-bc76-901f0e0838ef)
+
 
 **RESULTS**
 

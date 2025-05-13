@@ -67,7 +67,8 @@ endmodule
 
 **RTL LOGIC FOR SISO Shift Register**
 
-![siso 10](https://github.com/user-attachments/assets/c947da8a-993a-4a8d-bffd-b726ee3b77be)
+![image](https://github.com/user-attachments/assets/e7ba5403-8154-4400-83cd-e078c021bb9d)
+
 
 **TIMING DIGRAMS FOR SISO Shift Register**
 

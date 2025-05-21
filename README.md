@@ -25,56 +25,43 @@ Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and a
 
 **Procedure**
 
-
-```
-1.Type the Verilog program in Quartus Prime to implement the 4-bit Serial-In Serial-Out (SISO) Shift Register.
-
-2.Compile and run the program to ensure the design is error-free.
-
-3.Generate the RTL schematic to visualize the cascading D flip-fop connections and save it for documentation.
-
-4.Create nodes for the serial input (SI),clock (CLK),and serial output (SO) to observe the shifting process during simulation.
-
-5.Simulate the design for different input serail data patterns and observe the timing diagrams.
-```
+/* write all the steps invloved */
 
 **PROGRAM**
 
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
 ```
-Developed by : NIKSHITHA S
-Reg no : 24900161
+Developed by:NIKSHITHA S 
+RegisterNumber:212224040220
 ```
+*/
 ```
-module Serial(
-    input clk,    
-    input reset,
-    input si,     
-    output reg so 
-);
-    reg [3:0] shift_reg; 
-    always @(posedge clk or posedge reset) begin
-        if (reset) begin
-            shift_reg <= 4'b0000; 
-            so <= 0;             
-        end
-        else begin
-            so <= shift_reg[3];               
-            shift_reg <= {shift_reg[2:0], si}; 
-        end
-    end
+module EXP10(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
 endmodule
 ```
 
 **RTL LOGIC FOR SISO Shift Register**
 
-![image](https://github.com/user-attachments/assets/e7ba5403-8154-4400-83cd-e078c021bb9d)
 
+![437365361-b947947c-101b-4b80-a90a-0001d69b7775](https://github.com/user-attachments/assets/42b7e329-58c2-49d6-a6be-c5f1304ccf72)
 
 **TIMING DIGRAMS FOR SISO Shift Register**
 
-![image](https://github.com/user-attachments/assets/ae323052-dd7c-42bb-bc76-901f0e0838ef)
+
+![437365502-f34f70cb-9e9e-4db0-92a0-5094aa711a9d](https://github.com/user-attachments/assets/d2176c22-e1cc-4781-8972-e94974d6dd8f)
 
 
 **RESULTS**
 
-Thus, the Serial In and Serial Out is designed and its functionality is validated using the truth table and timing diagrams.
+SISO Shift Register using verilog and validating their functionality using their functional tables are verified.
